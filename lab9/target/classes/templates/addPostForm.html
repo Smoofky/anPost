@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <title>Edit Post</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+              crossorigin="anonymous" />
+        <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+            }
+
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="container-fluid text-center">
+
+            <form th:action="@{'/posts/editPost/' + ${post.id}}" method="post" style="max-width: 500px; margin: 0 auto;">
+
+
+                <div class="border border-secondary p-3 rounded">
+                    <p><label for="title">Post Title:</label></p>
+
+                    <p>        <input type="text" id="title" name="title" required style="width: 400px;" class="form-control" th:text="${post.title}">
+                    </p>
+                    <p><label for="content">Post Content:</label></p>                    
+                    <p>        <textarea id="content" name="content" required style="width: 400px; height: 200px;" class="form-control" th:text="${post.content}"></textarea>
+                    </p>
+                    <p><button type="submit" class="btn btn-primary">Edit</button></p>
+                    <p><a th:href="@{'/hello'}" class="btn btn-secondary">Cancel</a></p>
+
+                </div>
+            </form>      
+        </div>
+    </body>
+</html>
+
+
+
