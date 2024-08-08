@@ -1,2 +1,4 @@
 # anPost
-Projekt opisuje proces tworzenia strony internetowej dotyczącej postów.  JAVA (Thymeleaf - frontend Spring Boot - backend)
+# stack : Java, Springboot (backend), Thymeleaf (frontend)
+
+[View the description](anPost/anPost Description.pdf)
